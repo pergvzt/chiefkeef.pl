@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="pl">
+<!--
+    _____________________________________________________________________________
+
+                              Copyright © 2024 pergvzt
+                                Made for chiefkeef.pl
+
+                Reproduction without permission of the owner prohibited
+    _____________________________________________________________________________
+
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Przekierowywanie...</title>
+    <title>chiefkeef</title>
+    
     <meta http-equiv="refresh" content="0;url=https://fakecrime.bio/pergvzt">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
         body {
             background: #000;
@@ -13,39 +29,49 @@
             display: grid;
             place-items: center;
             margin: 0;
-            font-family: sans-serif;
+            font-family: 'JetBrains Mono', monospace;
             overflow: hidden;
         }
+
         #msg {
-            display: none; 
+            display: none;
             text-align: center;
             opacity: 0;
         }
-        a { color: #fff; }
-        @keyframes fadeInSmooth {
-            from { 
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
+
     <div id="msg">
         <p>Przekierowywanie...</p>
         <p><small>Jeśli nie nastąpi automatycznie, <a href="https://fakecrime.bio/pergvzt">kliknij tutaj</a>.</small></p>
     </div>
+
     <script>
         window.location.replace("https://fakecrime.bio/pergvzt");
+
         setTimeout(() => {
-            const msgBox = document.getElementById('msg');
-            msgBox.style.display = 'block';
-            msgBox.style.animation = 'fadeInSmooth 0.8s ease forwards'; 
+            var box = document.getElementById('msg');
+            box.style.display = 'block';
+            box.style.animation = 'fade 1.5s ease forwards'; 
         }, 1000);
     </script>
+
 </body>
 </html>
