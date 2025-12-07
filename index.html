@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl">
-<!--
-    _____________________________________________________________________________
-
-                              Copyright © 2024 pergvzt
-                                Made for chiefkeef.pl
-
-                Reproduction without permission of the owner prohibited
-    _____________________________________________________________________________
-
--->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chiefkeef</title>
-    
+    <title>Przekierowywanie...</title>
     <meta http-equiv="refresh" content="0;url=https://fakecrime.bio/pergvzt">
-
     <style>
         body {
             background: #000;
@@ -26,28 +14,38 @@
             place-items: center;
             margin: 0;
             font-family: sans-serif;
+            overflow: hidden;
         }
         #msg {
-            display: none;
+            display: none; 
             text-align: center;
+            opacity: 0;
         }
         a { color: #fff; }
+        @keyframes fadeInSmooth {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
-
     <div id="msg">
         <p>Przekierowywanie...</p>
         <p><small>Jeśli nie nastąpi automatycznie, <a href="https://fakecrime.bio/pergvzt">kliknij tutaj</a>.</small></p>
     </div>
-
     <script>
         window.location.replace("https://fakecrime.bio/pergvzt");
-
         setTimeout(() => {
-            document.getElementById('msg').style.display = 'block';
+            const msgBox = document.getElementById('msg');
+            msgBox.style.display = 'block';
+            msgBox.style.animation = 'fadeInSmooth 0.8s ease forwards'; 
         }, 1000);
     </script>
-
 </body>
 </html>
