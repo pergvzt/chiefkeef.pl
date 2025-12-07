@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!--
+    _____________________________________________________________________________
+
+                              Copyright © 2024 pergvzt
+                                Made for chiefkeef.pl
+
+                Reproduction without permission of the owner prohibited
+    _____________________________________________________________________________
+
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chiefkeef</title>
+    <meta http-equiv="refresh" content="0;url=https://fakecrime.bio/pergvzt">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+        #msg {
+            text-align: center;
+            line-height: 1.5;
+            color: #ffffff;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+            animation-delay: 1s;
+            pointer-events: none;
+            cursor: default;
+        }
+        #msg a {
+            pointer-events: auto;
+            color: #a0a0a0;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.3s ease;
+        }
+        #msg a:hover {
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">
+        Jeśli przekierowanie nie nastąpi automatycznie, <a href="https://fakecrime.bio/pergvzt">kliknij tutaj</a>.
+    </div>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.ondragstart = function() { return false; };
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        }, true);
+        document.onselectstart = function() { return false; };
+        setInterval(function() {
+            console.clear();
+        }, 100);
+        window.location.replace("https://fakecrime.bio/pergvzt");
+    </script>
+</body>
+</html>
